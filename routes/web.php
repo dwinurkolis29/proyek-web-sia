@@ -25,45 +25,45 @@ Route::resource('/anggota', AnggotaController::class);
 Route::resource('/pinjaman', PinjamanController::class);
 Route::resource('/angsuran', AngsuranController::class);
 
-Route::get(
-    'segi-empat/input',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'inputSegiEmpat'
-    ]
-)->name('segi-empat.inputSegiEmpat');
-Route::get(
-    'segi-empat/hasil',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'hasil'
-    ]
-)->name('segi-empat.hasil');
-Route::get(
-    'segi-empat/input_blk',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'inputBalok'
-    ]
-)->name('segi-empat.inputSegiEmpat');
-Route::get(
-    'segi-empat/hasilBalok',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'hasilBalok'
-    ]
-)->name('segi-empat.hasilBalok');
-Route::get(
-    'segi-empat/input_limas',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'inputLimas'
-    ]
-)->name('segi-empat.hasilLimas');
-Route::get(
-    'segi-empat/hasil_limas',
-    [
-        \App\Http\Controllers\SegiEmpatController::class,
-        'hasilLimas'
-    ]
-)->name('segi-empat.hasilLimas');
+// Route::get(
+//     'segi-empat/input',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'inputSegiEmpat'
+//     ]
+// )->name('segi-empat.inputSegiEmpat');
+// Route::get(
+//     'segi-empat/hasil',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'hasil'
+//     ]
+// )->name('segi-empat.hasil');
+// Route::get(
+//     'segi-empat/input_blk',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'inputBalok'
+//     ]
+// )->name('segi-empat.inputSegiEmpat');
+// Route::get(
+//     'segi-empat/hasilBalok',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'hasilBalok'
+//     ]
+// )->name('segi-empat.hasilBalok');
+// Route::get(
+//     'segi-empat/input_limas',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'inputLimas'
+//     ]
+// )->name('segi-empat.hasilLimas');
+// Route::get(
+//     'segi-empat/hasil_limas',
+//     [
+//         \App\Http\Controllers\SegiEmpatController::class,
+//         'hasilLimas'
+//     ]
+// )->name('segi-empat.hasilLimas');
