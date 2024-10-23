@@ -17,9 +17,8 @@
 
         <label for="angsuran" class="control-label">Status</label><br>
         <select class="form-control" name="status">
-            <option value="" selected>--pilihan--</option>
-            <option value="0">Belum Bayar</option>
-            <option value="1">Sudah Bayar</option>
+            <option value="{{ $angsuran->status }}" selected>{{ $angsuran->status == 1 ? 'Sudah Bayar' : 'Belum Bayar' }}</option>
+            <option value="{{ $angsuran->status == 1 ? '0' : '1' }}">{{ $angsuran->status == 1 ? 'Belum Bayar' : 'Sudah Bayar' }}</option>
         </select><br>
 
 
