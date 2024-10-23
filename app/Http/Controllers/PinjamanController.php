@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pinjaman;
+use App\Models\Anggota;
+use App\Models\JenisPinjaman;
 
 class PinjamanController extends Controller
 {
@@ -21,7 +23,9 @@ class PinjamanController extends Controller
      */
     public function create()
     {
-        //
+        $anggota = Anggota::all();
+        $jenis_pinjaman = JenisPinjaman::all();
+        return view('pinjaman.create', compact('anggota', 'jenis_pinjaman') );
     }
 
     /**
@@ -29,7 +33,21 @@ class PinjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'id_anggota' => 'required',
+            'besar_pinjaman' => 'required',
+            'diangsur_kali' => 'required',
+            'id_jenis_pinjaman' => 'required',
+            'besar_pokok_pinjaman' => 'required',
+            'besar_angsuran' => 'required',
+            'tanggal_pengajuan' => 'required|date',
+            'tanggal_acc' => 'required|date',
+            'tanggal_jatuh_tempo' => 'required|date',
+            'keterangan' => 'required',
+        ]);
+
+        Pinjaman::create($request->all());
+        return redirect()->route('pinjaman.index')->with('message', 'Transaksi pinjaman berhasil ditambahkan.');
     }
 
     /**

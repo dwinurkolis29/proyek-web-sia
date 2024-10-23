@@ -33,7 +33,7 @@
             <td>{{ $item->tanggal_jatuh_tempo }}</td>
             <td>{{ $item->besar_angsuran }}</td>
             <td>{{ $item->tanggal_pembayaran ?? 'Belum dibayar' }}</td>
-            <td>{{ $item->status == 0 ? 'Lunas' : 'Belum Lunas' }}</td>
+            <td>{{ $item->status == 1 ? 'Lunas' : 'Belum Lunas' }}</td>
             <td>
                 <a href="{{ route('angsuran.edit', $item->id_angsuran) }}" class="btn btn-warning">Transaksi Angsuran</a>
             </td>

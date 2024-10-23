@@ -6,6 +6,11 @@
 <h1>Data Pinjaman</h1>
 <a href="{{ route('pinjaman.create') }}" class="btn btn-primary">Transaksi Pinjam</a>
 
+@if ($message = Session::get('message'))
+<div class="alert alert-success martop-sm">
+    <p>{{ $message }}</p>
+</div>
+@endif
 <table class="table table-bordered mt-3">
     <thead>
         <tr>
@@ -28,7 +33,7 @@
             <td>{{ $pinjam->besar_pinjaman }}</td>
             <td>{{ $pinjam->diangsur_kali }}</td>
             <td>{{ $pinjam->besar_angsuran }}</td>
-            <td>{{ $pinjam->status == 0 ? 'Lunas' : 'Belum Lunas' }}</td>
+            <td>{{ $pinjam->status == 1 ? 'Lunas' : 'Belum Lunas' }}</td>
             <td>
                 <a href="{{ route('pinjaman.edit', $pinjam->id_pinjaman) }}" class="btn btn-warning">Transaksi Angsuran</a>
                 <form action="{{ route('pinjaman.destroy', $pinjam->id_pinjaman) }}" method="POST" style="display:inline-block;">

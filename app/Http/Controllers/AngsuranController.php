@@ -49,7 +49,8 @@ class AngsuranController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $angsuran = Angsuran::findOrFail($id);
+        return view('angsuran.edit', compact('angsuran'));
     }
 
     /**
@@ -57,7 +58,15 @@ class AngsuranController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request, [
+            'status' => 'required',
+        ]);
+
+
+        $angsuran = Angsuran::findOrFail($id)
+            ->update($request->all());
+        return redirect()->route('angsuran.index')
+            ->with('message', 'Transaksi angsuran berhasil dilakukan.');
     }
 
     /**
