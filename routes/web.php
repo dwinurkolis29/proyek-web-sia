@@ -7,6 +7,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\AngsuranController;
 use App\Http\Controllers\JenisPinjamanController;
 use App\Http\Controllers\PinjamanController;
+use App\Http\Controllers\SimpananController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +28,7 @@ Route::resource('/anggota', AnggotaController::class);
 Route::resource('/pinjaman', PinjamanController::class);
 Route::resource('/angsuran', AngsuranController::class);
 Route::resource('/jenis-pinjaman', JenisPinjamanController::class);
+Route::resource('/simpanan', SimpananController::class);
 
 // Route::get(
 //     'segi-empat/input',

@@ -15,6 +15,11 @@ class Simpanan extends Model
         'nama_simpanan',
         'id_anggota',
         'tanggal',
-        'besar_simpan'
+        'besar_simpanan'
     ];
+
+    public function anggota()
+    {
+        return $this->belongsTo(Anggota::class, 'id_anggota');
+    }
 }
