@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropinsiController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\AngsuranController;
+use App\Http\Controllers\JenisPinjamanController;
 use App\Http\Controllers\PinjamanController;
 
 Route::get('/', function () {
@@ -21,9 +22,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/propinsi', PropinsiController::class);
 Route::resource('/kota', KotaController::class);
+
 Route::resource('/anggota', AnggotaController::class);
 Route::resource('/pinjaman', PinjamanController::class);
 Route::resource('/angsuran', AngsuranController::class);
+Route::resource('/jenis-pinjaman', JenisPinjamanController::class);
 
 // Route::get(
 //     'segi-empat/input',
